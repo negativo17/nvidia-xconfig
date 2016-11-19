@@ -1,5 +1,5 @@
 Name:           nvidia-xconfig
-Version:        370.28
+Version:        370.20
 Release:        1%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          2
@@ -38,6 +38,9 @@ mkdir -p %{buildroot}%{_sbindir}
 %{_mandir}/man1/%{name}.1.*
 
 %changelog
+* Sat Nov 19 2016 Simone Caronni <negativo17@gmail.com> - 2:370.20-1
+- Update to 375.20.
+
 * Fri Sep 09 2016 Simone Caronni <negativo17@gmail.com> - 2:370.28-1
 - Update to 370.28.
 
