@@ -10,6 +10,7 @@ ExclusiveArch:  %{ix86} x86_64
 Source0:        https://github.com/NVIDIA/%{name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  gcc
+BuildRequires:  libpciaccess-devel
 BuildRequires:  m4
 
 %description
