@@ -1,5 +1,5 @@
 Name:           nvidia-xconfig
-Version:        510.73.05
+Version:        515.48.07
 Release:        1%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          3
@@ -27,12 +27,14 @@ export CFLAGS="%{optflags}"
 export LDFLAGS="%{?__global_ldflags}"
 make %{?_smp_mflags} \
     DEBUG=1 \
+    MANPAGE_GZIP=0 \
     NV_VERBOSE=1 \
     PREFIX=%{_prefix} \
     STRIP_CMD=true
 
 %install
 %make_install \
+    MANPAGE_GZIP=0 \
     NV_VERBOSE=1 \
     PREFIX=%{_prefix} \
     STRIP_CMD=true
@@ -40,9 +42,13 @@ make %{?_smp_mflags} \
 %files
 %license COPYING
 %{_bindir}/%{name}
-%{_mandir}/man1/%{name}.1.*
+%{_mandir}/man1/%{name}.1*
 
 %changelog
+* Wed Jun 01 2022 Simone Caronni <negativo17@gmail.com> - 3:515.48.07-1
+- Update to 515.48.07.
+- Add upstream patch.
+
 * Tue May 31 2022 Simone Caronni <negativo17@gmail.com> - 3:510.73.05-1
 - Update to 510.73.05.
 
