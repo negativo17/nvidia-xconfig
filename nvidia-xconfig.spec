@@ -1,5 +1,5 @@
 Name:           nvidia-xconfig
-Version:        535.104.05
+Version:        535.113.01
 Release:        1%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          3
@@ -45,6 +45,9 @@ make %{?_smp_mflags} \
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Fri Sep 22 2023 Simone Caronni <negativo17@gmail.com> - 3:535.113.01-1
+- Update to 535.113.01.
+
 * Thu Aug 24 2023 Simone Caronni <negativo17@gmail.com> - 3:535.104.05-1
 - Update to 535.104.05.
 
