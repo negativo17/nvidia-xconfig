@@ -1,6 +1,6 @@
 Name:           nvidia-xconfig
-Version:        550.54.14
-Release:        2%{?dist}
+Version:        550.67
+Release:        1%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          3
 License:        GPLv2+
@@ -45,6 +45,9 @@ make %{?_smp_mflags} \
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Sun Mar 24 2024 Simone Caronni <negativo17@gmail.com> - 3:550.67-1
+- Update to 550.67.
+
 * Sat Mar 09 2024 Simone Caronni <negativo17@gmail.com> - 3:550.54.14-2
 - Enable aarch64.
 
