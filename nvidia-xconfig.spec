@@ -1,13 +1,13 @@
 Name:           nvidia-xconfig
 Version:        550.78
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          3
 License:        GPLv2+
 URL:            http://www.nvidia.com/object/unix.html
-ExclusiveArch:  %{ix86} x86_64 aarch64
+ExclusiveArch:  x86_64 aarch64
 
-Source0:        https://github.com/NVIDIA/%{name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://download.nvidia.com/XFree86/%{name}/%{name}-%{version}.tar.bz2
 
 BuildRequires:  gcc
 BuildRequires:  libpciaccess-devel
@@ -45,6 +45,9 @@ make %{?_smp_mflags} \
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Tue Apr 30 2024 Simone Caronni <negativo17@gmail.com> - 3:550.78-2
+- Switch to Nvidia provided tarball.
+
 * Fri Apr 26 2024 Simone Caronni <negativo17@gmail.com> - 3:550.78-1
 - Update to 550.78.
 
