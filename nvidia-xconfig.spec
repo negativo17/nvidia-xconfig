@@ -1,6 +1,6 @@
 Name:           nvidia-xconfig
-Version:        550.78
-Release:        2%{?dist}
+Version:        550.90.07
+Release:        1%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          3
 License:        GPLv2+
@@ -45,6 +45,9 @@ make %{?_smp_mflags} \
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Wed Jun 05 2024 Simone Caronni <negativo17@gmail.com> - 3:550.90.07-1
+- Update to 550.90.07.
+
 * Tue Apr 30 2024 Simone Caronni <negativo17@gmail.com> - 3:550.78-2
 - Switch to Nvidia provided tarball.
 
