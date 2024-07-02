@@ -13,6 +13,8 @@ BuildRequires:  gcc
 BuildRequires:  libpciaccess-devel
 BuildRequires:  m4
 
+Requires:       libnvidia-cfg%{?_isa} >= %{?epoch:%{epoch}:}%{version}
+
 %description
 %{name} is a command line tool intended to provide basic control over
 configuration options available in the NVIDIA X driver.
@@ -47,6 +49,7 @@ make %{?_smp_mflags} \
 %changelog
 * Tue Jul 02 2024 Simone Caronni <negativo17@gmail.com> - 3:555.58.02-1
 - Update to 555.58.02.
+- Require dynamically loaded library libnvidia-cfg.
 
 * Thu Jun 27 2024 Simone Caronni <negativo17@gmail.com> - 3:555.58-1
 - Update to 555.58.
