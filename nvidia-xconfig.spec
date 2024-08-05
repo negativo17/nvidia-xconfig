@@ -1,5 +1,5 @@
 Name:           nvidia-xconfig
-Version:        555.58.02
+Version:        560.28.03
 Release:        1%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          3
@@ -47,6 +47,9 @@ make %{?_smp_mflags} \
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Mon Aug 05 2024 Simone Caronni <negativo17@gmail.com> - 3:560.28.03-1
+- Update to 560.28.03.
+
 * Tue Jul 02 2024 Simone Caronni <negativo17@gmail.com> - 3:555.58.02-1
 - Update to 555.58.02.
 - Require dynamically loaded library libnvidia-cfg.
