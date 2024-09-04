@@ -1,6 +1,6 @@
 Name:           nvidia-xconfig
-Version:        555.58.02
-Release:        1%{?dist}
+Version:        560.35.03
+Release:        2%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          3
 License:        GPLv2+
@@ -14,6 +14,7 @@ BuildRequires:  libpciaccess-devel
 BuildRequires:  m4
 
 Requires:       libnvidia-cfg%{?_isa} >= %{?epoch:%{epoch}:}%{version}
+Requires:       xorg-x11-nvidia%{?_isa} >= %{?epoch:%{epoch}:}%{version}
 
 %description
 %{name} is a command line tool intended to provide basic control over
@@ -47,6 +48,11 @@ make %{?_smp_mflags} \
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Wed Sep 04 2024 Simone Caronni <negativo17@gmail.com> - 3:560.35.03-2
+- Update to 560.35.03.
+- Add requirement on xorg-x11-nvidia so package gets removed as well in case of
+  uninstallation of X.org components.
+
 * Tue Jul 02 2024 Simone Caronni <negativo17@gmail.com> - 3:555.58.02-1
 - Update to 555.58.02.
 - Require dynamically loaded library libnvidia-cfg.
