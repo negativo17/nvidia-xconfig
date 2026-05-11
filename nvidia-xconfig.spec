@@ -1,5 +1,5 @@
 Name:           nvidia-xconfig
-Version:        595.71.05
+Version:        610.43.02
 Release:        1%{?dist}
 Summary:        NVIDIA X configuration file editor
 Epoch:          3
@@ -13,7 +13,8 @@ BuildRequires:  gcc
 BuildRequires:  libpciaccess-devel
 BuildRequires:  m4
 
-Requires:       libnvidia-cfg%{?_isa} >= %{?epoch:%{epoch}:}%{version}
+# dlopened: libnvidia-cfg
+Requires:       nvidia-driver-common%{?_isa} >= %{?epoch:%{epoch}:}%{version}
 Requires:       xorg-x11-nvidia%{?_isa} >= %{?epoch:%{epoch}:}%{version}
 
 %description
@@ -48,6 +49,9 @@ make %{?_smp_mflags} \
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Tue May 26 2026 Simone Caronni <negativo17@gmail.com> - 3:610.43.02-1
+- Update to 610.43.02.
+
 * Tue Apr 28 2026 Simone Caronni <negativo17@gmail.com> - 3:595.71.05-1
 - Update to 595.71.05.
 
